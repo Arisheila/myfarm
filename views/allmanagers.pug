@@ -1,0 +1,27 @@
+extends layout 
+
+block content
+    body.collections
+         h2.reg Manager List.
+         table.table.table-washers 
+            thead
+                tr
+                    th Name 
+                    th Email
+                tbody
+                if users.length
+                    each user in users
+                        tr
+                            td #{user.name}
+                            //name and email have to match exactly with models database file as they are written in small case
+                            td #{user.email}
+                            td
+                                form.delete(method="post" action='/managers/delete')
+                                    input(type="hidden", placeholder="", name="id", value=user._id)
+                                    button.button2(type="submit") Delete
+
+                            
+    
+
+                
+                    

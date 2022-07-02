@@ -1,0 +1,21 @@
+extend loginlayout 
+block content 
+    body.dash 
+        .container-login 
+            .container 
+                h1 Farm Manager Register
+                form(action='/register' method='POST')
+                    h4.sign-in Register!
+                    .form-floating
+                        small#error1
+                        input#exampleInputEmail1.form-control(type='text' name='name' aria-describedby='userName' placeholder='User Name')
+                    br    
+                    .form-floating
+                        small#error1
+                        input#exampleInputEmail1.form-control(type='email' name='email' aria-describedby='emailHelp' placeholder='Email Address')
+                    br
+                    .form-floating
+                        small#error2
+                        input#exampleInputPassword1.form-control(type='password' name='password' placeholder='Password')
+                    br
+                    button.btn.btn-primary(type='submit') Submit

@@ -1,0 +1,26 @@
+extends loginlayout
+block content  
+  header.card-header 
+    h4.card-title Product Farm Sale
+  form(action="/products" method="POST")
+    .form-row 
+      .col.form-group
+        label(for="productName") Product Name 
+        input.form-control#firstname(type="text" name="name") 
+      .col.form-group
+        label(for="priceName") Price 
+        input.form-control(type="text" name="price")
+    .form-row 
+      .col.form-group
+        label(for="quantity") Quantity
+        input.form-control(type="text" name="quantity") 
+      .col.form-group
+        label(for="status") Status 
+        input.form-control(type="text" name="status")    
+    .form-row 
+      .col.form-group
+        label(for="type") Type 
+        input.form-control(type="text" name="type")    
+    .form-row
+      .col.form-group
+        button.submit.btn.btn-primary.btn-block Register
